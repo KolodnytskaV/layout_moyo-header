@@ -6,6 +6,10 @@ body {
   font-weight: 500;
 }
 
+:root {
+  --blue: #00acdc;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -24,12 +28,13 @@ header img {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-left: 50px;
   display: flex;
   align-items: center;
 }
 
-.nav_item {
-  margin: 0 10px;
+.nav_item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .nav_link {
@@ -46,7 +51,7 @@ header img {
 }
 
 .nav_link.is-active {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav_link.is-active::after {
@@ -58,11 +63,11 @@ header img {
   height: 4px;
   width: 37px;
   border-radius: 8px;
-  background-color: #00acdc;
+  background-color: var(--blue);
 }
 
 .nav_link:hover {
-  color: #00acdc;
+  color: var(--blue);
 }
 
 .nav_item:first-child {
@@ -70,5 +75,5 @@ header img {
 }
 
 .nav_item:last-child {
-  margin-right: 0;
+  margin-right: 50px;
 }
